@@ -1,0 +1,25 @@
+{
+	"persistedWindowLayouts" : 
+	[
+		{
+			"initialPosition" : "893,386",
+			"initialSize" : 
+			{
+				"height" : 738.0,
+				"width" : 1301.0
+			},
+			"launchMode" : "default",
+			"tabLayout" : 
+			[
+				{
+					"action" : "newTab",
+					"commandline" : "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+					"profile" : "Windows PowerShell",
+					"startingDirectory" : "C:\\Users\\gsina",
+					"suppressApplicationTitle" : false,
+					"tabTitle" : "Windows PowerShell"
+				}
+			]
+		}
+	]
+}

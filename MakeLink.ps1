@@ -1,0 +1,1 @@
+New-Item -ItemType SymbolicLink -Path $args[0] -Target $args[1] -Force -Verbose
