@@ -1,5 +1,3 @@
-
-# Check if terminal is elevated
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 
 if (!$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -7,14 +5,11 @@ if (!$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adminis
   exit 1
 }
 
-# Install latest powershell
-.\pwsh7-install.ps1
+$configFolder = "$env:USERPROFILE"
+$configFile = ".gitconfig"
 
-# Config pwsh terminal
-.\terminal-config.ps1
+Remove-Item "$configFolder\$configFile"
 
-# Config choco
-.\choco-install.ps1
+Write-Output "Copying github file" 
+.\MakeLink.ps1 "$configFolder\$configFile" "$(Get-Location)\git\.gitconfig"
 
-# Install modules
-.\install-modules.ps1
